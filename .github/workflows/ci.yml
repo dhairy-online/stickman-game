@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup repository
+      - name: Setup repo
         uses: actions/checkout@v2
 
       - name: Setup Deno
       - uses: denoland/setup-deno@v1
         with: 
-          deno-version: vx.x.x
+            deno-version: vx.x.x
 
       - name: Verify formatting
         run: deno fmt --check
