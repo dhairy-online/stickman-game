@@ -19,6 +19,10 @@ jobs:
       fail-fast: false
 
     steps:
+    - name: Install rust
+      uses: hecrj/setup-rust-action@v1
+      with:
+          rust-version: nightly
     - uses: actions/checkout@v2
     - name: Build
       run: cargo build --verbose
